@@ -1,0 +1,27 @@
+version: '3'
+services:
+  web:
+    image: '8290911319/demovalley2'
+    build: .
+    ports:
+      - "9090:9090"
+
+  database:
+    image: 'mongo'
+    ports:
+      - "27019:27017"version: '3'
+networks:
+    batman:
+      driver: bridge
+
+services:
+  web:
+    image: '8290911319/demovalley2'
+    build: . 
+    networks:
+      - batman
+
+  database:
+    image: 'mongo'
+    networks:
+      - batman
