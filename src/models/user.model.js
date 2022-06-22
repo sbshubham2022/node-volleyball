@@ -12,9 +12,10 @@ const userSchema = mongoose.Schema(
       trim: true,
     },
     email: {
-      type: String,
+      
       required: true,
       unique: true,
+      type: String,
       trim: true,
       lowercase: true,
       validate(value) {
