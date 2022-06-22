@@ -31,7 +31,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Build and push
         run: |  
-          echo "${{secrets.DOCKER_HUB_TOKEN }}" | docker login -u 8290911319 --password-somani!@1
+          echo "${{secrets.DOCKER_HUB_TOKEN }}" | docker login -u "8290911319" --password-somani!@1
           docker image build -t 8290911319/nodeeightjuly12:v2 .
           docker push 8290911319/nodeeightjuly12:v2
         
